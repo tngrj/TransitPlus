@@ -1,0 +1,2173 @@
+{
+	"connections": [
+		{
+			"from": "PTC",
+			"to": "PE1",
+			"line": "PE",
+			"duration_seconds": 180,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "PE1",
+			"to": "PE2",
+			"line": "PE",
+			"duration_seconds": 60,
+			"distance_km": 0.4,
+			"is_transfer": false
+		},
+		{
+			"from": "PE2",
+			"to": "PE3",
+			"line": "PE",
+			"duration_seconds": 60,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "PE3",
+			"to": "PE4",
+			"line": "PE",
+			"duration_seconds": 60,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "PE4",
+			"to": "PE5",
+			"line": "PE",
+			"duration_seconds": 60,
+			"distance_km": 0.7,
+			"is_transfer": false
+		},
+		{
+			"from": "PE5",
+			"to": "PE6",
+			"line": "PE",
+			"duration_seconds": 60,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "PE6",
+			"to": "PE7",
+			"line": "PE",
+			"duration_seconds": 60,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "PE7",
+			"to": "PTC",
+			"line": "PE",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "PTC",
+			"to": "PW1",
+			"line": "PW",
+			"duration_seconds": 120,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "PW1",
+			"to": "PW2",
+			"line": "PW",
+			"duration_seconds": 60,
+			"distance_km": 0.4,
+			"is_transfer": false
+		},
+		{
+			"from": "PW2",
+			"to": "PW3",
+			"line": "PW",
+			"duration_seconds": 60,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "PW3",
+			"to": "PW4",
+			"line": "PW",
+			"duration_seconds": 60,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "PW4",
+			"to": "PW5",
+			"line": "PW",
+			"duration_seconds": 60,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "PW5",
+			"to": "PW6",
+			"line": "PW",
+			"duration_seconds": 60,
+			"distance_km": 0.4,
+			"is_transfer": false
+		},
+		{
+			"from": "PW6",
+			"to": "PW7",
+			"line": "PW",
+			"duration_seconds": 60,
+			"distance_km": 0.4,
+			"is_transfer": false
+		},
+		{
+			"from": "PW7",
+			"to": "PTC",
+			"line": "PW",
+			"duration_seconds": 180,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "STC",
+			"to": "SE1",
+			"line": "SE",
+			"duration_seconds": 120,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "SE1",
+			"to": "SE2",
+			"line": "SE",
+			"duration_seconds": 60,
+			"distance_km": 0.7,
+			"is_transfer": false
+		},
+		{
+			"from": "SE2",
+			"to": "SE3",
+			"line": "SE",
+			"duration_seconds": 60,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "SE3",
+			"to": "SE4",
+			"line": "SE",
+			"duration_seconds": 60,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "SE4",
+			"to": "SE5",
+			"line": "SE",
+			"duration_seconds": 120,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "SE5",
+			"to": "STC",
+			"line": "SE",
+			"duration_seconds": 180,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "STC",
+			"to": "SW1",
+			"line": "SW",
+			"duration_seconds": 120,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "SW1",
+			"to": "SW2",
+			"line": "SW",
+			"duration_seconds": 60,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "SW2",
+			"to": "SW3",
+			"line": "SW",
+			"duration_seconds": 60,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "SW3",
+			"to": "SW4",
+			"line": "SW",
+			"duration_seconds": 60,
+			"distance_km": 0.7,
+			"is_transfer": false
+		},
+		{
+			"from": "SW4",
+			"to": "SW5",
+			"line": "SW",
+			"duration_seconds": 60,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "SW5",
+			"to": "SW6",
+			"line": "SW",
+			"duration_seconds": 60,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "SW6",
+			"to": "SW7",
+			"line": "SW",
+			"duration_seconds": 60,
+			"distance_km": 0.7,
+			"is_transfer": false
+		},
+		{
+			"from": "SW7",
+			"to": "SW8",
+			"line": "SW",
+			"duration_seconds": 60,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "SW8",
+			"to": "STC",
+			"line": "SW",
+			"duration_seconds": 180,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "NE1",
+			"to": "NE3",
+			"line": "NE",
+			"duration_seconds": 240,
+			"distance_km": 2.6,
+			"is_transfer": false
+		},
+		{
+			"from": "NE3",
+			"to": "NE4",
+			"line": "NE",
+			"duration_seconds": 60,
+			"distance_km": 0.7,
+			"is_transfer": false
+		},
+		{
+			"from": "NE4",
+			"to": "NE5",
+			"line": "NE",
+			"duration_seconds": 120,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "NE5",
+			"to": "NE6",
+			"line": "NE",
+			"duration_seconds": 180,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "NE6",
+			"to": "NE7",
+			"line": "NE",
+			"duration_seconds": 60,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "NE7",
+			"to": "NE8",
+			"line": "NE",
+			"duration_seconds": 60,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "NE8",
+			"to": "NE9",
+			"line": "NE",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "NE9",
+			"to": "NE10",
+			"line": "NE",
+			"duration_seconds": 180,
+			"distance_km": 1.6,
+			"is_transfer": false
+		},
+		{
+			"from": "NE10",
+			"to": "NE11",
+			"line": "NE",
+			"duration_seconds": 60,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "NE11",
+			"to": "NE12",
+			"line": "NE",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "NE12",
+			"to": "NE13",
+			"line": "NE",
+			"duration_seconds": 180,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "NE13",
+			"to": "NE14",
+			"line": "NE",
+			"duration_seconds": 120,
+			"distance_km": 1.5,
+			"is_transfer": false
+		},
+		{
+			"from": "NE14",
+			"to": "NE15",
+			"line": "NE",
+			"duration_seconds": 120,
+			"distance_km": 1.3,
+			"is_transfer": false
+		},
+		{
+			"from": "NE15",
+			"to": "NE16",
+			"line": "NE",
+			"duration_seconds": 120,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "NE16",
+			"to": "NE17",
+			"line": "NE",
+			"duration_seconds": 180,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "NE17",
+			"to": "NE18",
+			"line": "NE",
+			"duration_seconds": 180,
+			"distance_km": 1.6,
+			"is_transfer": false
+		},
+		{
+			"from": "DT1",
+			"to": "DT2",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "DT2",
+			"to": "DT3",
+			"line": "DT",
+			"duration_seconds": 60,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "DT3",
+			"to": "DT4",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "DT4",
+			"to": "DT5",
+			"line": "DT",
+			"duration_seconds": 180,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "DT5",
+			"to": "DT6",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "DT6",
+			"to": "DT7",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.6,
+			"is_transfer": false
+		},
+		{
+			"from": "DT7",
+			"to": "DT8",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.3,
+			"is_transfer": false
+		},
+		{
+			"from": "DT8",
+			"to": "DT9",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "DT9",
+			"to": "DT10",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "DT10",
+			"to": "DT11",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.6,
+			"is_transfer": false
+		},
+		{
+			"from": "DT11",
+			"to": "DT2",
+			"line": "DT",
+			"duration_seconds": 180,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "DT12",
+			"to": "DT13",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "DT13",
+			"to": "DT14",
+			"line": "DT",
+			"duration_seconds": 60,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "DT14",
+			"to": "DT15",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "DT15",
+			"to": "DT16",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.3,
+			"is_transfer": false
+		},
+		{
+			"from": "DT16",
+			"to": "DT17",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "DT17",
+			"to": "DT18",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "DT18",
+			"to": "DT19",
+			"line": "DT",
+			"duration_seconds": 60,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "DT19",
+			"to": "DT20",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "DT20",
+			"to": "DT21",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "DT21",
+			"to": "DT22",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "DT22",
+			"to": "DT23",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.3,
+			"is_transfer": false
+		},
+		{
+			"from": "DT23",
+			"to": "DT24",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "DT24",
+			"to": "DT25",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.5,
+			"is_transfer": false
+		},
+		{
+			"from": "DT25",
+			"to": "DT26",
+			"line": "DT",
+			"duration_seconds": 60,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "DT26",
+			"to": "DT27",
+			"line": "DT",
+			"duration_seconds": 180,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "DT27",
+			"to": "DT28",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "DT28",
+			"to": "DT29",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "DT29",
+			"to": "DT30",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.8,
+			"is_transfer": false
+		},
+		{
+			"from": "DT30",
+			"to": "DT31",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "DT31",
+			"to": "DT32",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 1.3,
+			"is_transfer": false
+		},
+		{
+			"from": "DT32",
+			"to": "DT33",
+			"line": "DT",
+			"duration_seconds": 180,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "DT33",
+			"to": "DT34",
+			"line": "DT",
+			"duration_seconds": 180,
+			"distance_km": 2.6,
+			"is_transfer": false
+		},
+		{
+			"from": "DT34",
+			"to": "DT35",
+			"line": "DT",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "NS1",
+			"to": "NS2",
+			"line": "NS",
+			"duration_seconds": 180,
+			"distance_km": 2.1,
+			"is_transfer": false
+		},
+		{
+			"from": "NS2",
+			"to": "NS3",
+			"line": "NS",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "NS3",
+			"to": "NS4",
+			"line": "NS",
+			"duration_seconds": 240,
+			"distance_km": 3.3,
+			"is_transfer": false
+		},
+		{
+			"from": "NS4",
+			"to": "NS5",
+			"line": "NS",
+			"duration_seconds": 180,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "NS5",
+			"to": "NS7",
+			"line": "NS",
+			"duration_seconds": 300,
+			"distance_km": 4.1,
+			"is_transfer": false
+		},
+		{
+			"from": "NS7",
+			"to": "NS8",
+			"line": "NS",
+			"duration_seconds": 180,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "NS8",
+			"to": "NS9",
+			"line": "NS",
+			"duration_seconds": 120,
+			"distance_km": 1.5,
+			"is_transfer": false
+		},
+		{
+			"from": "NS9",
+			"to": "NS10",
+			"line": "NS",
+			"duration_seconds": 180,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "NS10",
+			"to": "NS11",
+			"line": "NS",
+			"duration_seconds": 180,
+			"distance_km": 2.4,
+			"is_transfer": false
+		},
+		{
+			"from": "NS11",
+			"to": "NS12",
+			"line": "NS",
+			"duration_seconds": 180,
+			"distance_km": 1.5,
+			"is_transfer": false
+		},
+		{
+			"from": "NS12",
+			"to": "NS13",
+			"line": "NS",
+			"duration_seconds": 180,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "NS13",
+			"to": "NS14",
+			"line": "NS",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "NS14",
+			"to": "NS15",
+			"line": "NS",
+			"duration_seconds": 360,
+			"distance_km": 4.9,
+			"is_transfer": false
+		},
+		{
+			"from": "NS15",
+			"to": "NS16",
+			"line": "NS",
+			"duration_seconds": 120,
+			"distance_km": 1.5,
+			"is_transfer": false
+		},
+		{
+			"from": "NS16",
+			"to": "NS17",
+			"line": "NS",
+			"duration_seconds": 240,
+			"distance_km": 2.4,
+			"is_transfer": false
+		},
+		{
+			"from": "NS17",
+			"to": "NS18",
+			"line": "NS",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "NS18",
+			"to": "NS19",
+			"line": "NS",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "NS19",
+			"to": "NS20",
+			"line": "NS",
+			"duration_seconds": 180,
+			"distance_km": 1.5,
+			"is_transfer": false
+		},
+		{
+			"from": "NS20",
+			"to": "NS21",
+			"line": "NS",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "NS21",
+			"to": "NS22",
+			"line": "NS",
+			"duration_seconds": 180,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "NS22",
+			"to": "NS23",
+			"line": "NS",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "NS23",
+			"to": "NS24",
+			"line": "NS",
+			"duration_seconds": 120,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "NS24",
+			"to": "NS25",
+			"line": "NS",
+			"duration_seconds": 180,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "NS25",
+			"to": "NS26",
+			"line": "NS",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "NS26",
+			"to": "NS27",
+			"line": "NS",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "NS27",
+			"to": "NS28",
+			"line": "NS",
+			"duration_seconds": 180,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "EW1",
+			"to": "EW2",
+			"line": "EW",
+			"duration_seconds": 180,
+			"distance_km": 2.4,
+			"is_transfer": false
+		},
+		{
+			"from": "EW2",
+			"to": "EW3",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "EW3",
+			"to": "EW4",
+			"line": "EW",
+			"duration_seconds": 180,
+			"distance_km": 2.5,
+			"is_transfer": false
+		},
+		{
+			"from": "EW4",
+			"to": "EW5",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.9,
+			"is_transfer": false
+		},
+		{
+			"from": "EW5",
+			"to": "EW6",
+			"line": "EW",
+			"duration_seconds": 180,
+			"distance_km": 2.0,
+			"is_transfer": false
+		},
+		{
+			"from": "EW6",
+			"to": "EW7",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "EW7",
+			"to": "EW8",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "EW8",
+			"to": "EW9",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "EW9",
+			"to": "EW10",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "EW10",
+			"to": "EW11",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "EW11",
+			"to": "EW12",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "EW12",
+			"to": "EW13",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "EW13",
+			"to": "EW14",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "EW14",
+			"to": "EW15",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "EW15",
+			"to": "EW16",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "EW16",
+			"to": "EW17",
+			"line": "EW",
+			"duration_seconds": 180,
+			"distance_km": 1.5,
+			"is_transfer": false
+		},
+		{
+			"from": "EW17",
+			"to": "EW18",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "EW18",
+			"to": "EW19",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "EW19",
+			"to": "EW20",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "EW20",
+			"to": "EW21",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "EW21",
+			"to": "EW22",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "EW22",
+			"to": "EW23",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "EW23",
+			"to": "EW24",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 3.5,
+			"is_transfer": false
+		},
+		{
+			"from": "EW24",
+			"to": "EW25",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.5,
+			"is_transfer": false
+		},
+		{
+			"from": "EW25",
+			"to": "EW26",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "EW26",
+			"to": "EW27",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.8,
+			"is_transfer": false
+		},
+		{
+			"from": "EW27",
+			"to": "EW28",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "EW28",
+			"to": "EW29",
+			"line": "EW",
+			"duration_seconds": 240,
+			"distance_km": 2.6,
+			"is_transfer": false
+		},
+		{
+			"from": "EW29",
+			"to": "EW30",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 2.3,
+			"is_transfer": false
+		},
+		{
+			"from": "EW30",
+			"to": "EW31",
+			"line": "EW",
+			"duration_seconds": 180,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "EW31",
+			"to": "EW32",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "EW32",
+			"to": "EW33",
+			"line": "EW",
+			"duration_seconds": 120,
+			"distance_km": 1.3,
+			"is_transfer": false
+		},
+		{
+			"from": "CG0",
+			"to": "CG1",
+			"line": "CG",
+			"duration_seconds": 180,
+			"distance_km": 1.9,
+			"is_transfer": false
+		},
+		{
+			"from": "CG1",
+			"to": "CG2",
+			"line": "CG",
+			"duration_seconds": 360,
+			"distance_km": 4.5,
+			"is_transfer": false
+		},
+		{
+			"from": "TE1",
+			"to": "TE2",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "TE2",
+			"to": "TE3",
+			"line": "TE",
+			"duration_seconds": 180,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "TE3",
+			"to": "TE4",
+			"line": "TE",
+			"duration_seconds": 300,
+			"distance_km": 4.4,
+			"is_transfer": false
+		},
+		{
+			"from": "TE4",
+			"to": "TE5",
+			"line": "TE",
+			"duration_seconds": 180,
+			"distance_km": 2.6,
+			"is_transfer": false
+		},
+		{
+			"from": "TE5",
+			"to": "TE6",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "TE6",
+			"to": "TE7",
+			"line": "TE",
+			"duration_seconds": 180,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "TE7",
+			"to": "TE8",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "TE8",
+			"to": "TE9",
+			"line": "TE",
+			"duration_seconds": 180,
+			"distance_km": 2.2,
+			"is_transfer": false
+		},
+		{
+			"from": "TE9",
+			"to": "TE11",
+			"line": "TE",
+			"duration_seconds": 300,
+			"distance_km": 3.0,
+			"is_transfer": false
+		},
+		{
+			"from": "TE11",
+			"to": "TE12",
+			"line": "TE",
+			"duration_seconds": 180,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "TE12",
+			"to": "TE13",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "TE13",
+			"to": "TE14",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "TE14",
+			"to": "TE15",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "TE15",
+			"to": "TE16",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 0.7,
+			"is_transfer": false
+		},
+		{
+			"from": "TE16",
+			"to": "TE17",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "TE17",
+			"to": "TE18",
+			"line": "TE",
+			"duration_seconds": 60,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "TE18",
+			"to": "TE19",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "TE19",
+			"to": "TE20",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 0.7,
+			"is_transfer": false
+		},
+		{
+			"from": "TE20",
+			"to": "TE22",
+			"line": "TE",
+			"duration_seconds": 240,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "TE22",
+			"to": "TE23",
+			"line": "TE",
+			"duration_seconds": 240,
+			"distance_km": 2.7,
+			"is_transfer": false
+		},
+		{
+			"from": "TE23",
+			"to": "TE24",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 1.5,
+			"is_transfer": false
+		},
+		{
+			"from": "TE24",
+			"to": "TE25",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "TE25",
+			"to": "TE26",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "TE26",
+			"to": "TE27",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "TE27",
+			"to": "TE28",
+			"line": "TE",
+			"duration_seconds": 120,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "TE28",
+			"to": "TE29",
+			"line": "TE",
+			"duration_seconds": 180,
+			"distance_km": 1.3,
+			"is_transfer": false
+		},
+		{
+			"from": "CC1",
+			"to": "CC2",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "CC2",
+			"to": "CC3",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 0.7,
+			"is_transfer": false
+		},
+		{
+			"from": "CC3",
+			"to": "CC4",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "CC4",
+			"to": "CC5",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "CC5",
+			"to": "CC6",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.5,
+			"is_transfer": false
+		},
+		{
+			"from": "CC6",
+			"to": "CC7",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "CC7",
+			"to": "CC8",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 0.7,
+			"is_transfer": false
+		},
+		{
+			"from": "CC8",
+			"to": "CC9",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "CC9",
+			"to": "CC10",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.1,
+			"is_transfer": false
+		},
+		{
+			"from": "CC10",
+			"to": "CC11",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "CC11",
+			"to": "CC12",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.3,
+			"is_transfer": false
+		},
+		{
+			"from": "CC12",
+			"to": "CC13",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.3,
+			"is_transfer": false
+		},
+		{
+			"from": "CC13",
+			"to": "CC14",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "CC14",
+			"to": "CC15",
+			"line": "CC",
+			"duration_seconds": 180,
+			"distance_km": 1.7,
+			"is_transfer": false
+		},
+		{
+			"from": "CC15",
+			"to": "CC16",
+			"line": "CC",
+			"duration_seconds": 180,
+			"distance_km": 1.6,
+			"is_transfer": false
+		},
+		{
+			"from": "CC16",
+			"to": "CC17",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.2,
+			"is_transfer": false
+		},
+		{
+			"from": "CC17",
+			"to": "CC19",
+			"line": "CC",
+			"duration_seconds": 300,
+			"distance_km": 3.9,
+			"is_transfer": false
+		},
+		{
+			"from": "CC19",
+			"to": "CC20",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.0,
+			"is_transfer": false
+		},
+		{
+			"from": "CC20",
+			"to": "CC21",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "CC21",
+			"to": "CC22",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "CC22",
+			"to": "CC23",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "CC23",
+			"to": "CC24",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "CC24",
+			"to": "CC25",
+			"line": "CC",
+			"duration_seconds": 180,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "CC25",
+			"to": "CC26",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.3,
+			"is_transfer": false
+		},
+		{
+			"from": "CC26",
+			"to": "CC27",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.4,
+			"is_transfer": false
+		},
+		{
+			"from": "CC27",
+			"to": "CC28",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "CC28",
+			"to": "CC29",
+			"line": "CC",
+			"duration_seconds": 120,
+			"distance_km": 1.5,
+			"is_transfer": false
+		},
+		{
+			"from": "CC4",
+			"to": "CE1",
+			"line": "CE",
+			"duration_seconds": 120,
+			"distance_km": 1.3,
+			"is_transfer": false
+		},
+		{
+			"from": "CE1",
+			"to": "CE2",
+			"line": "CE",
+			"duration_seconds": 120,
+			"distance_km": 0.8,
+			"is_transfer": false
+		},
+		{
+			"from": "BP1",
+			"to": "BP2",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "BP2",
+			"to": "BP3",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "BP3",
+			"to": "BP4",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "BP4",
+			"to": "BP5",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "BP5",
+			"to": "BP6",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.7,
+			"is_transfer": false
+		},
+		{
+			"from": "BP6",
+			"to": "BP7",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.4,
+			"is_transfer": false
+		},
+		{
+			"from": "BP7",
+			"to": "BP8",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "BP8",
+			"to": "BP9",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "BP9",
+			"to": "BP10",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.9,
+			"is_transfer": false
+		},
+		{
+			"from": "BP10",
+			"to": "BP11",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.5,
+			"is_transfer": false
+		},
+		{
+			"from": "BP11",
+			"to": "BP12",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.7,
+			"is_transfer": false
+		},
+		{
+			"from": "BP12",
+			"to": "BP13",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "BP13",
+			"to": "BP6",
+			"line": "BP",
+			"duration_seconds": 120,
+			"distance_km": 0.6,
+			"is_transfer": false
+		},
+		{
+			"from": "NS1",
+			"to": "EW24",
+			"duration_seconds": 10,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "EW24",
+			"to": "NS1",
+			"duration_seconds": 10,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NS4",
+			"to": "BP1",
+			"duration_seconds": 110,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "BP1",
+			"to": "NS4",
+			"duration_seconds": 100,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NS9",
+			"to": "TE2",
+			"duration_seconds": 260,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "TE2",
+			"to": "NS9",
+			"duration_seconds": 230,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NS17",
+			"to": "CC15",
+			"duration_seconds": 150,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CC15",
+			"to": "NS17",
+			"duration_seconds": 150,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NS21",
+			"to": "DT11",
+			"duration_seconds": 220,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT11",
+			"to": "NS21",
+			"duration_seconds": 200,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NS22",
+			"to": "TE14",
+			"duration_seconds": 190,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NS24",
+			"to": "NE6",
+			"duration_seconds": 200,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NE6",
+			"to": "NS24",
+			"duration_seconds": 190,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NS24",
+			"to": "CC1",
+			"duration_seconds": 100,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CC1",
+			"to": "NS24",
+			"duration_seconds": 110,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NE6",
+			"to": "CC1",
+			"duration_seconds": 110,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CC1",
+			"to": "NE6",
+			"duration_seconds": 120,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NS25",
+			"to": "EW13",
+			"duration_seconds": 30,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "EW13",
+			"to": "NS25",
+			"duration_seconds": 30,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NS26",
+			"to": "EW14",
+			"duration_seconds": 30,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "EW14",
+			"to": "NS26",
+			"duration_seconds": 30,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NS27",
+			"to": "CE2",
+			"duration_seconds": 190,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CE2",
+			"to": "NS27",
+			"duration_seconds": 200,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NS27",
+			"to": "TE20",
+			"duration_seconds": 310,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "TE20",
+			"to": "NS27",
+			"duration_seconds": 310,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "TE20",
+			"to": "CE2",
+			"duration_seconds": 220,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CE2",
+			"to": "TE20",
+			"duration_seconds": 220,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "EW2",
+			"to": "DT32",
+			"duration_seconds": 380,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT32",
+			"to": "EW2",
+			"duration_seconds": 360,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "EW8",
+			"to": "CC9",
+			"duration_seconds": 160,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CC9",
+			"to": "EW8",
+			"duration_seconds": 160,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "EW12",
+			"to": "DT14",
+			"duration_seconds": 240,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT14",
+			"to": "EW12",
+			"duration_seconds": 230,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "EW16",
+			"to": "NE3",
+			"duration_seconds": 170,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NE3",
+			"to": "EW16",
+			"duration_seconds": 150,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "EW16",
+			"to": "TE17",
+			"duration_seconds": 110,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "TE17",
+			"to": "EW16",
+			"duration_seconds": 120,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NE3",
+			"to": "TE17",
+			"duration_seconds": 210,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "TE17",
+			"to": "NE3",
+			"duration_seconds": 210,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "EW21",
+			"to": "CC22",
+			"duration_seconds": 170,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CC22",
+			"to": "EW21",
+			"duration_seconds": 190,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CG1",
+			"to": "DT35",
+			"duration_seconds": 170,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT35",
+			"to": "CG1",
+			"duration_seconds": 180,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "EW4",
+			"to": "CG0",
+			"duration_seconds": 10,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CG0",
+			"to": "EW4",
+			"duration_seconds": 10,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NE1",
+			"to": "CC29",
+			"duration_seconds": 110,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CC29",
+			"to": "NE1",
+			"duration_seconds": 120,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NE4",
+			"to": "DT19",
+			"duration_seconds": 100,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT19",
+			"to": "NE4",
+			"duration_seconds": 50,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NE7",
+			"to": "DT12",
+			"duration_seconds": 190,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT12",
+			"to": "NE7",
+			"duration_seconds": 180,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NE12",
+			"to": "CC13",
+			"duration_seconds": 160,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CC13",
+			"to": "NE12",
+			"duration_seconds": 190,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NE16",
+			"to": "STC",
+			"duration_seconds": 110,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "STC",
+			"to": "NE16",
+			"duration_seconds": 100,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "NE17",
+			"to": "PTC",
+			"duration_seconds": 90,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "PTC",
+			"to": "NE17",
+			"duration_seconds": 100,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CC4",
+			"to": "DT15",
+			"duration_seconds": 90,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT15",
+			"to": "CC4",
+			"duration_seconds": 90,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CC10",
+			"to": "DT26",
+			"duration_seconds": 70,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT26",
+			"to": "CC10",
+			"duration_seconds": 50,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CC17",
+			"to": "TE9",
+			"duration_seconds": 190,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "TE9",
+			"to": "CC17",
+			"duration_seconds": 210,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CC19",
+			"to": "DT9",
+			"duration_seconds": 190,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT9",
+			"to": "CC19",
+			"duration_seconds": 190,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "CE1",
+			"to": "DT16",
+			"duration_seconds": 30,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT16",
+			"to": "CE1",
+			"duration_seconds": 30,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT1",
+			"to": "BP6",
+			"duration_seconds": 270,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "BP6",
+			"to": "DT1",
+			"duration_seconds": 270,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "DT10",
+			"to": "TE11",
+			"duration_seconds": 110,
+			"distance_km": 0,
+			"is_transfer": true
+		},
+		{
+			"from": "TE11",
+			"to": "DT10",
+			"duration_seconds": 100,
+			"distance_km": 0,
+			"is_transfer": true
+		}
+	]
+}

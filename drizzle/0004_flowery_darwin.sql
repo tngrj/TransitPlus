@@ -1,0 +1,1 @@
+ALTER TABLE "connections" ALTER COLUMN "line_id" DROP NOT NULL;

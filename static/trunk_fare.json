@@ -1,0 +1,511 @@
+{
+	"trunk_services": [
+		{
+			"distance": {
+				"min_km": 0,
+				"max_km": 3.2
+			},
+			"fares": {
+				"student": { "card": 52, "cash": 95 },
+				"adult": { "card": 119, "cash": 190 },
+				"senior_citizen": { "card": 69, "cash": 130 },
+				"concession": { "card": 78, "cash": 0 },
+				"disability": { "card": 69, "cash": 130 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 3.3,
+				"max_km": 4.2
+			},
+			"fares": {
+				"student": { "card": 57, "cash": 95 },
+				"adult": { "card": 129, "cash": 210 },
+				"senior_citizen": { "card": 76, "cash": 130 },
+				"concession": { "card": 86, "cash": 0 },
+				"disability": { "card": 76, "cash": 130 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 4.3,
+				"max_km": 5.2
+			},
+			"fares": {
+				"student": { "card": 63, "cash": 95 },
+				"adult": { "card": 140, "cash": 210 },
+				"senior_citizen": { "card": 84, "cash": 130 },
+				"concession": { "card": 95, "cash": 0 },
+				"disability": { "card": 84, "cash": 130 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 5.3,
+				"max_km": 6.2
+			},
+			"fares": {
+				"student": { "card": 68, "cash": 95 },
+				"adult": { "card": 150, "cash": 210 },
+				"senior_citizen": { "card": 91, "cash": 130 },
+				"concession": { "card": 103, "cash": 0 },
+				"disability": { "card": 91, "cash": 130 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 6.3,
+				"max_km": 7.2
+			},
+			"fares": {
+				"student": { "card": 71, "cash": 115 },
+				"adult": { "card": 159, "cash": 230 },
+				"senior_citizen": { "card": 97, "cash": 160 },
+				"concession": { "card": 110, "cash": 0 },
+				"disability": { "card": 97, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 7.3,
+				"max_km": 8.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 166, "cash": 230 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 116, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 8.3,
+				"max_km": 9.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 173, "cash": 230 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 122, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 9.3,
+				"max_km": 10.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 177, "cash": 250 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 125, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 10.3,
+				"max_km": 11.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 181, "cash": 250 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 128, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 11.3,
+				"max_km": 12.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 185, "cash": 270 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 131, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 12.3,
+				"max_km": 13.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 189, "cash": 270 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 134, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 13.3,
+				"max_km": 14.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 193, "cash": 270 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 137, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 14.3,
+				"max_km": 15.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 198, "cash": 270 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 140, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 15.3,
+				"max_km": 16.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 202, "cash": 280 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 143, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 16.3,
+				"max_km": 17.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 206, "cash": 280 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 146, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 17.3,
+				"max_km": 18.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 210, "cash": 280 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 149, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 18.3,
+				"max_km": 19.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 214, "cash": 280 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 152, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 19.3,
+				"max_km": 20.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 217, "cash": 290 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 155, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 20.3,
+				"max_km": 21.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 220, "cash": 290 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 158, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 21.3,
+				"max_km": 22.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 223, "cash": 290 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 161, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 22.3,
+				"max_km": 23.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 226, "cash": 290 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 164, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 23.3,
+				"max_km": 24.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 228, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 166, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 24.3,
+				"max_km": 25.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 230, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 167, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 25.3,
+				"max_km": 26.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 232, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 168, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 26.3,
+				"max_km": 27.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 233, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 169, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 27.3,
+				"max_km": 28.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 234, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 170, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 28.3,
+				"max_km": 29.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 235, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 171, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 29.3,
+				"max_km": 30.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 236, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 172, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 30.3,
+				"max_km": 31.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 237, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 173, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 31.3,
+				"max_km": 32.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 238, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 174, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 32.3,
+				"max_km": 33.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 239, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 175, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 33.3,
+				"max_km": 34.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 240, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 176, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 34.3,
+				"max_km": 35.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 241, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 177, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 35.3,
+				"max_km": 36.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 242, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 178, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 36.3,
+				"max_km": 37.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 243, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 179, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 37.3,
+				"max_km": 38.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 244, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 180, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 38.3,
+				"max_km": 39.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 245, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 181, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 39.3,
+				"max_km": 40.2
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 246, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 182, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 40.3,
+				"max_km": null
+			},
+			"fares": {
+				"student": { "card": 74, "cash": 115 },
+				"adult": { "card": 247, "cash": 300 },
+				"senior_citizen": { "card": 103, "cash": 160 },
+				"concession": { "card": 183, "cash": 0 },
+				"disability": { "card": 103, "cash": 160 }
+			}
+		}
+	]
+}

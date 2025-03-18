@@ -1,0 +1,17 @@
+{
+	"lines": [
+		{ "code": "NS", "name": "North-South Line" },
+		{ "code": "EW", "name": "East-West Line" },
+		{ "code": "CC", "name": "Circle Line" },
+		{ "code": "NE", "name": "North East Line" },
+		{ "code": "DT", "name": "Downtown Line" },
+		{ "code": "TE", "name": "Thomson-East Coast Line" },
+		{ "code": "CG", "name": "Changi Airport Branch Line" },
+		{ "code": "BP", "name": "Bukit Panjang LRT" },
+		{ "code": "SE", "name": "Sengkang LRT East Loop" },
+		{ "code": "SW", "name": "Sengkang LRT West Loop" },
+		{ "code": "PE", "name": "Punggol LRT East Loop" },
+		{ "code": "PW", "name": "Punggol LRT West Loop" },
+		{ "code": "CE", "name": "Circle Line Extension" }
+	]
+}

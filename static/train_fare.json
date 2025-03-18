@@ -1,0 +1,511 @@
+{
+	"train_services": [
+		{
+			"distance": {
+				"min_km": 0,
+				"max_km": 3.2
+			},
+			"fares": {
+				"student": { "early": 2, "normal": 52 },
+				"adult": { "early": 69, "normal": 119 },
+				"senior_citizen": { "early": 19, "normal": 69 },
+				"concession": { "early": 28, "normal": 78 },
+				"disability": { "early": 19, "normal": 69 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 3.3,
+				"max_km": 4.2
+			},
+			"fares": {
+				"student": { "early": 7, "normal": 57 },
+				"adult": { "early": 79, "normal": 129 },
+				"senior_citizen": { "early": 26, "normal": 76 },
+				"concession": { "early": 36, "normal": 86 },
+				"disability": { "early": 26, "normal": 76 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 4.3,
+				"max_km": 5.2
+			},
+			"fares": {
+				"student": { "early": 13, "normal": 63 },
+				"adult": { "early": 90, "normal": 140 },
+				"senior_citizen": { "early": 34, "normal": 84 },
+				"concession": { "early": 45, "normal": 95 },
+				"disability": { "early": 34, "normal": 84 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 5.3,
+				"max_km": 6.2
+			},
+			"fares": {
+				"student": { "early": 18, "normal": 68 },
+				"adult": { "early": 100, "normal": 150 },
+				"senior_citizen": { "early": 41, "normal": 91 },
+				"concession": { "early": 53, "normal": 103 },
+				"disability": { "early": 41, "normal": 91 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 6.3,
+				"max_km": 7.2
+			},
+			"fares": {
+				"student": { "early": 21, "normal": 71 },
+				"adult": { "early": 109, "normal": 159 },
+				"senior_citizen": { "early": 47, "normal": 97 },
+				"concession": { "early": 60, "normal": 110 },
+				"disability": { "early": 47, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 7.3,
+				"max_km": 8.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 116, "normal": 166 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 66, "normal": 116 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 8.3,
+				"max_km": 9.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 123, "normal": 173 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 72, "normal": 122 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 9.3,
+				"max_km": 10.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 127, "normal": 177 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 75, "normal": 125 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 10.3,
+				"max_km": 11.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 131, "normal": 181 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 78, "normal": 128 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 11.3,
+				"max_km": 12.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 135, "normal": 185 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 81, "normal": 131 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 12.3,
+				"max_km": 13.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 139, "normal": 189 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 84, "normal": 134 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 13.3,
+				"max_km": 14.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 143, "normal": 193 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 87, "normal": 137 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 14.3,
+				"max_km": 15.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 148, "normal": 198 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 90, "normal": 140 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 15.3,
+				"max_km": 16.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 152, "normal": 202 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 93, "normal": 143 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 16.3,
+				"max_km": 17.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 156, "normal": 206 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 96, "normal": 146 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 17.3,
+				"max_km": 18.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 160, "normal": 210 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 99, "normal": 149 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 18.3,
+				"max_km": 19.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 164, "normal": 214 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 102, "normal": 152 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 19.3,
+				"max_km": 20.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 167, "normal": 217 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 105, "normal": 155 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 20.3,
+				"max_km": 21.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 170, "normal": 220 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 108, "normal": 158 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 21.3,
+				"max_km": 22.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 173, "normal": 223 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 111, "normal": 161 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 22.3,
+				"max_km": 23.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 176, "normal": 226 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 114, "normal": 164 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 23.3,
+				"max_km": 24.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 178, "normal": 228 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 116, "normal": 166 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 24.3,
+				"max_km": 25.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 180, "normal": 230 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 117, "normal": 167 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 25.3,
+				"max_km": 26.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 182, "normal": 232 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 118, "normal": 168 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 26.3,
+				"max_km": 27.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 183, "normal": 233 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 119, "normal": 169 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 27.3,
+				"max_km": 28.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 184, "normal": 234 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 120, "normal": 170 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 28.3,
+				"max_km": 29.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 185, "normal": 235 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 121, "normal": 171 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 29.3,
+				"max_km": 30.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 186, "normal": 236 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 122, "normal": 172 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 30.3,
+				"max_km": 31.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 187, "normal": 237 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 123, "normal": 173 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 31.3,
+				"max_km": 32.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 188, "normal": 238 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 124, "normal": 174 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 32.3,
+				"max_km": 33.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 189, "normal": 239 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 125, "normal": 175 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 33.3,
+				"max_km": 34.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 190, "normal": 240 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 126, "normal": 176 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 34.3,
+				"max_km": 35.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 191, "normal": 241 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 127, "normal": 177 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 35.3,
+				"max_km": 36.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 192, "normal": 242 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 128, "normal": 178 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 36.3,
+				"max_km": 37.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 193, "normal": 243 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 129, "normal": 179 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 37.3,
+				"max_km": 38.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 194, "normal": 244 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 130, "normal": 180 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 38.3,
+				"max_km": 39.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 195, "normal": 245 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 131, "normal": 181 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 39.3,
+				"max_km": 40.2
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 196, "normal": 246 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 132, "normal": 182 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		},
+		{
+			"distance": {
+				"min_km": 40.3,
+				"max_km": 99
+			},
+			"fares": {
+				"student": { "early": 24, "normal": 74 },
+				"adult": { "early": 197, "normal": 247 },
+				"senior_citizen": { "early": 53, "normal": 97 },
+				"concession": { "early": 133, "normal": 183 },
+				"disability": { "early": 53, "normal": 97 }
+			}
+		}
+	]
+}
