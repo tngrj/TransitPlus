@@ -19,8 +19,7 @@
 
 <Navbar let:toggle>
 	<NavBrand href="/">
-		<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-			>Transit+</span
+		<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Transit+</span
 		>
 	</NavBrand>
 	<div class="flex md:order-2">

@@ -1,12 +1,12 @@
 {
-	"name": "trainme",
+	"name": "transitplus",
 	"version": "0.0.1",
+	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && npm run prepack",
+		"build": "vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
-		"prepack": "svelte-kit sync && svelte-package && publint",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
@@ -16,67 +16,49 @@
 		"test:e2e": "playwright test",
 		"db:push": "drizzle-kit push",
 		"db:migrate": "drizzle-kit migrate",
-		"db:studio": "drizzle-kit studio"
-	},
-	"files": [
-		"dist",
-		"!dist/**/*.test.*",
-		"!dist/**/*.spec.*"
-	],
-	"sideEffects": [
-		"**/*.css"
-	],
-	"svelte": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"type": "module",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
-		}
-	},
-	"peerDependencies": {
-		"svelte": "^5.0.0"
+		"db:studio": "drizzle-kit studio",
+		"deploy": "pnpm run build && wrangler pages deploy",
+		"cf-typegen": "wrangler types && mv worker-configuration.d.ts src/"
 	},
 	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250317.0",
 		"@eslint/compat": "^1.2.7",
-		"@eslint/js": "^9.21.0",
-		"@playwright/test": "^1.50.1",
-		"@sveltejs/adapter-auto": "^4.0.0",
-		"@sveltejs/kit": "^2.17.3",
-		"@sveltejs/package": "^2.3.10",
+		"@eslint/js": "^9.22.0",
+		"@playwright/test": "^1.51.1",
+		"@sveltejs/adapter-cloudflare-workers": "^2.9.0",
+		"@sveltejs/kit": "^2.20.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@tailwindcss/forms": "^0.5.10",
 		"@tailwindcss/typography": "^0.5.16",
-		"@tailwindcss/vite": "^4.0.9",
+		"@tailwindcss/vite": "^4.0.14",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.7",
 		"@types/d3": "^7.4.3",
-		"@types/node": "^22.13.5",
+		"@types/node": "^22.13.10",
 		"drizzle-kit": "^0.30.5",
-		"eslint": "^9.21.0",
-		"eslint-config-prettier": "^10.0.2",
-		"eslint-plugin-svelte": "^2.46.1",
+		"eslint": "^9.22.0",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-svelte": "^3.3.2",
 		"flowbite": "^3.1.2",
 		"flowbite-svelte": "^0.48.4",
 		"globals": "^16.0.0",
 		"jsdom": "^26.0.0",
-		"prettier": "^3.5.2",
+		"prettier": "^3.5.3",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",
-		"publint": "^0.3.6",
-		"svelte": "^5.20.4",
-		"svelte-check": "^4.1.4",
-		"tailwindcss": "^4.0.9",
-		"typescript": "^5.7.3",
-		"typescript-eslint": "^8.25.0",
-		"vite": "^6.2.0",
-		"vitest": "^3.0.7"
+		"svelte": "^5.23.2",
+		"svelte-check": "^4.1.5",
+		"tailwindcss": "^4.0.14",
+		"typescript": "^5.8.2",
+		"typescript-eslint": "^8.26.1",
+		"vite": "^6.2.2",
+		"vitest": "^3.0.9",
+		"wrangler": "^4.2.0"
 	},
 	"dependencies": {
-		"@lucide/svelte": "^0.479.0",
+		"@lucide/svelte": "^0.483.0",
 		"d3": "^7.9.0",
-		"drizzle-orm": "^0.40.0",
+		"drizzle-orm": "^0.40.1",
 		"postgres": "^3.4.5"
 	},
 	"pnpm": {
