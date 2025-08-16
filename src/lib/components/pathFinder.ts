@@ -1,6 +1,5 @@
 import type { Station, StationLine, Connection } from '$lib/utils/transitTyping';
 
-// Define additional types needed for the algorithm
 export type StationWithLines = Station & {
 	stationLines?: StationLine[];
 };
@@ -59,7 +58,7 @@ export class PathFinder {
 			graph[conn.fromStationId].push({
 				to: conn.toStationId,
 				duration: conn.durationSeconds,
-				distance: conn.distanceKm,
+				distance: conn.distanceKm ?? 0,
 				lineId: conn.lineId || conn.fromLineId,
 				lineName: conn.lineName,
 				isTransfer: conn.isTransfer
@@ -76,7 +75,7 @@ export class PathFinder {
 				graph[conn.toStationId].push({
 					to: conn.fromStationId,
 					duration: conn.durationSeconds,
-					distance: conn.distanceKm,
+					distance: conn.distanceKm ?? 0,
 					lineId: conn.lineId || conn.toLineId,
 					lineName: conn.lineName,
 					isTransfer: false

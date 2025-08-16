@@ -3,7 +3,7 @@
 	import type { PageData } from './$types';
 
 	let { data } = $props<{ data: PageData }>();
-	let { stationsWithLines, connections } = data;
+	let { stationsWithLines, connections, faresWithBands } = data;
 </script>
 
 <div class="mt-4">

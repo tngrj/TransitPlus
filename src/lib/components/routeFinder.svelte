@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button, Select, Modal, Card } from 'flowbite-svelte';
-	import { Route, Train } from '@lucide/svelte';
+	import { Select, Modal, Card } from 'flowbite-svelte';
+	import { Train } from '@lucide/svelte';
 	import MetroGraph from './metroGraph.svelte';
 	import { PathFinder } from './pathFinder';
 	import { getLineColour } from '$lib/utils/lineColours';
@@ -102,9 +102,8 @@
 </script>
 
 <div class="container mx-auto p-4">
-	>
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-4">
-		<div class="md:col-span-3">
+		<div class="hidden md:col-span-3 md:block">
 			<MetroGraph
 				bind:this={graphComponent}
 				{stationsWithLines}
@@ -114,7 +113,7 @@
 		</div>
 
 		<Card>
-			<div class="mb-4">
+			<div class="mb-4 space-y-4">
 				<Select
 					bind:value={fromStation}
 					on:change={() => {
@@ -128,9 +127,7 @@
 						</option>
 					{/each}
 				</Select>
-			</div>
 
-			<div class="mb-4">
 				<Select
 					bind:value={toStation}
 					on:change={() => {
@@ -145,44 +142,38 @@
 					{/each}
 				</Select>
 			</div>
-
-			<Button color="primary" class="mb-4 w-full" on:click={calculatePath}>
-				<Route class="mr-2" size={16} />
-				Find Route
-			</Button>
 		</Card>
 	</div>
 </div>
 
-<Modal bind:open={showPathDetails} title="Route Details">
+<Modal bind:open={showPathDetails}>
+	<div slot="header" class="flex items-center gap-2 text-black dark:text-white">
+		<Train class="mr-2" size={24} />
+		<h2 class="text-xl font-semibold">
+			{path[0]?.stationName} to {path[path.length - 1]?.stationName}
+		</h2>
+	</div>
 	<div class="p-4">
-		<div class="mb-4 flex items-center text-black dark:text-white">
-			<Train class="mr-2" size={24} />
-			<h2 class="text-xl font-semibold">
-				{path[0]?.stationName} to {path[path.length - 1]?.stationName}
-			</h2>
-		</div>
-
-		<div class="mb-4 grid grid-cols-4 gap-4">
-			<div class="rounded-lg bg-gray-100 p-3 text-center">
-				<div class="text-sm text-gray-600">Duration</div>
+		<div class="mb-4 grid grid-cols-2 gap-4 md:grid-cols-4">
+			<Card class="text-center">
+				<div class="text-sm text-gray-400">Duration</div>
 				<div class="text-xl font-bold">{Math.floor(totalDuration / 60)} min</div>
-			</div>
+			</Card>
 
-			<div class="rounded-lg bg-gray-100 p-3 text-center">
-				<div class="text-sm text-gray-600">Transfers</div>
+			<Card class="text-center">
+				<div class="text-sm text-gray-400">Transfers</div>
 				<div class="text-xl font-bold">{transfersCount}</div>
-			</div>
+			</Card>
 
-			<div class="rounded-lg bg-gray-100 p-3 text-center">
-				<div class="text-sm text-gray-600">Stations</div>
+			<Card class="text-center">
+				<div class="text-sm text-gray-400">Stations</div>
 				<div class="text-xl font-bold">{path.length - 1}</div>
-			</div>
+			</Card>
 
-			<div class="rounded-lg bg-gray-100 p-3 text-center">
-				<div class="text-sm text-gray-600">Distance</div>
+			<Card class="text-center">
+				<div class="text-sm text-gray-400">Distance</div>
 				<div class="text-xl font-bold">{totalDistance.toFixed(1)} km</div>
-			</div>
+			</Card>
 		</div>
 
 		<div class="space-y-3 text-black dark:text-white">
