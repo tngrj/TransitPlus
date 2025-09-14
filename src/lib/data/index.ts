@@ -9,10 +9,11 @@ import type {
 } from '$lib/types/transit.js';
 
 // Import JSON data
-import linesData from './lines.json' with { type: 'json' };
-import stationsData from './stations.json' with { type: 'json' };
-import connectionsData from './connections.json' with { type: 'json' };
-import trainFareData from './train_fare.json' with { type: 'json' };
+import linesData from './lines.json';
+import stationsData from './stations.json';
+import connectionsData from './connections.json';
+import trainFareData from './train_fare.json';
+import sgRailGeoJson from './sg-rail.geo.json';
 
 // Create lookup maps for efficient data access
 const linesMap = new Map<string, { id: string; code: string; name: string }>();
@@ -172,4 +173,8 @@ export function getConnections() {
 
 export function getTrainFares() {
 	return (trainFareData as TrainFareData).train_services;
+}
+
+export function getSgRailGeoJson() {
+	return sgRailGeoJson;
 }

@@ -3,7 +3,7 @@ import {
 	getStationsWithLines,
 	getConnectionsWithDetails,
 	getFaresWithBands
-} from '$lib/server/data/index.js';
+} from '$lib/data/index.js';
 
 export const load: LayoutServerLoad = async () => {
 	// Get stations with their station lines
