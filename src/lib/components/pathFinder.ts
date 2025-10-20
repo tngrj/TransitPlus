@@ -1,23 +1,19 @@
-import type { Station, StationLine, Connection } from '$lib/utils/transitTyping';
-
-export type StationWithLines = Station & {
-	stationLines?: StationLine[];
-};
+import type { StationWithLines, ConnectionWithDetails } from '$lib/types/transit';
 
 export type PathStep = {
-	station: number;
-	line: number | null;
+	station: string;
+	line: string | null;
 	lineName: string | null;
 	stationName: string;
 };
 
 type Graph = Record<
-	number,
+	string,
 	Array<{
-		to: number;
+		to: string;
 		duration: number;
 		distance: number;
-		lineId: number | null;
+		lineId: string | null;
 		lineName: string | null;
 		isTransfer: boolean;
 	}>
@@ -31,10 +27,10 @@ export type PathResult = {
 
 export class PathFinder {
 	private stationsWithLines: StationWithLines[];
-	private connections: Connection[];
+	private connections: ConnectionWithDetails[];
 	private graph: Graph | null = null;
 
-	constructor(stationsWithLines: StationWithLines[], connections: Connection[]) {
+	constructor(stationsWithLines: StationWithLines[], connections: ConnectionWithDetails[]) {
 		this.stationsWithLines = stationsWithLines;
 		this.connections = connections;
 	}
@@ -87,13 +83,13 @@ export class PathFinder {
 	}
 
 	// Get station by ID
-	private getStationName(stationId: number): string {
+	private getStationName(stationId: string): string {
 		const station = this.stationsWithLines.find((s) => s.id === stationId);
 		return station ? String(station.name) : 'Unknown';
 	}
 
 	// Dijkstra algorithm to find shortest path
-	public findShortestPath(from: number, to: number): PathResult {
+	public findShortestPath(from: string, to: string): PathResult {
 		// Build or use cached graph
 		if (!this.graph) {
 			this.graph = this.buildGraph();
@@ -101,11 +97,11 @@ export class PathFinder {
 
 		const graph = this.graph;
 		const queue: Array<{
-			station: number;
+			station: string;
 			duration: number;
 			distance: number;
 			path: PathStep[];
-			currentLine: number | null;
+			currentLine: string | null;
 			transfers: number;
 		}> = [];
 

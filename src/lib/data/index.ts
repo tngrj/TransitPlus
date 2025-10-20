@@ -94,23 +94,45 @@ export async function getConnectionsWithDetails(): Promise<ConnectionWithDetails
 		const toStationName = stationCodeToNameMap.get(connection.to);
 		const fromStation = fromStationName ? stationsMap.get(fromStationName) : undefined;
 		const toStation = toStationName ? stationsMap.get(toStationName) : undefined;
-		const line = linesMap.get(connection.line);
 
-		if (fromStation && toStation && line) {
-			connections.push({
-				id: (index + 1).toString(),
-				fromStationId: fromStation.id,
-				toStationId: toStation.id,
-				lineId: line.id,
-				fromLineId: connection.is_transfer ? line.id : undefined,
-				toLineId: connection.is_transfer ? line.id : undefined,
-				durationSeconds: connection.duration_seconds,
-				distanceKm: connection.distance_km,
-				isTransfer: connection.is_transfer,
-				fromStationName: fromStation.name,
-				toStationName: toStation.name,
-				lineName: line.name
-			});
+		// For transfers, we don't need a line, for regular connections we do
+		if (connection.is_transfer) {
+			// Transfer connection - no line required
+			if (fromStation && toStation) {
+				connections.push({
+					id: (index + 1).toString(),
+					fromStationId: fromStation.id,
+					toStationId: toStation.id,
+					lineId: 'transfer', // Special identifier for transfers
+					fromLineId: undefined,
+					toLineId: undefined,
+					durationSeconds: connection.duration_seconds,
+					distanceKm: connection.distance_km,
+					isTransfer: connection.is_transfer,
+					fromStationName: fromStation.name,
+					toStationName: toStation.name,
+					lineName: 'Transfer'
+				});
+			}
+		} else {
+			// Regular connection - line required
+			const line = linesMap.get(connection.line);
+			if (fromStation && toStation && line) {
+				connections.push({
+					id: (index + 1).toString(),
+					fromStationId: fromStation.id,
+					toStationId: toStation.id,
+					lineId: line.id,
+					fromLineId: undefined,
+					toLineId: undefined,
+					durationSeconds: connection.duration_seconds,
+					distanceKm: connection.distance_km,
+					isTransfer: connection.is_transfer,
+					fromStationName: fromStation.name,
+					toStationName: toStation.name,
+					lineName: line.name
+				});
+			}
 		}
 	});
 
@@ -177,4 +199,55 @@ export function getTrainFares() {
 
 export function getSgRailGeoJson() {
 	return sgRailGeoJson;
+}
+
+// Enhanced GeoJSON function that adds line information to the existing GeoJSON
+export function getEnhancedGeoJson() {
+	const geoJson = { ...sgRailGeoJson };
+
+	// Filter to only show stations that exist in our internal data (both MRT and LRT)
+	const validStationNames = new Set(Array.from(stationsMap.keys()));
+
+	// Add line colors and enhanced properties to station features
+	geoJson.features = geoJson.features
+		.filter((feature) => {
+			// Include both MRT and LRT stations, and mixed stations
+			const network = feature.properties?.network;
+			if (!network || (!network.includes('singapore-mrt') && !network.includes('singapore-lrt'))) {
+				return false;
+			}
+
+			// Only include stations that exist in our internal station data
+			// Trim whitespace to handle cases like "Kaki Bukit " vs "Kaki Bukit"
+			const stationName = feature.properties?.name?.trim();
+			if (!stationName || !validStationNames.has(stationName)) {
+				return false;
+			}
+
+			return true;
+		})
+		.map((feature) => {
+			if (feature.properties && feature.properties.station_codes) {
+				const stationCodes = feature.properties.station_codes.split('-');
+				const lineCode = stationCodes[0]?.replace(/\d+$/, ''); // Extract line code (e.g., "NS" from "NS10")
+
+				// Find line ID from our lines map
+				const line = linesMap.get(lineCode);
+				const lineId = line?.id;
+
+				return {
+					...feature,
+					properties: {
+						...feature.properties,
+						name: feature.properties.name?.trim(), // Trim whitespace from name
+						lineId,
+						stationCodes,
+						primaryLineCode: lineCode
+					}
+				};
+			}
+			return feature;
+		});
+
+	return geoJson;
 }

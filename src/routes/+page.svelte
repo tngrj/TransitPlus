@@ -2,7 +2,7 @@
 	import RouteFinder from '$lib/components/routeFinder.svelte';
 	import type { PageData } from './$types';
 
-	let { data } = $props<{ data: PageData }>();
+	let { data }: { data: PageData } = $props();
 	let { stationsWithLines, connections, faresWithBands } = data;
 </script>
 

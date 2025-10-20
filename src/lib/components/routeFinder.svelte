@@ -4,18 +4,18 @@
 	import MetroGraph from './metroGraph.svelte';
 	import { PathFinder } from './pathFinder';
 	import { getLineColour } from '$lib/utils/lineColours';
-	import type { Station, Connection, StationLine } from '$lib/utils/transitTyping';
+	import type { StationWithLines, ConnectionWithDetails } from '$lib/types/transit';
 
 	let {
 		stationsWithLines,
 		connections
-	}: { stationsWithLines: Station[]; connections: Connection[] } = $props();
+	}: { stationsWithLines: StationWithLines[]; connections: ConnectionWithDetails[] } = $props();
 
 	const pathFinder = new PathFinder(stationsWithLines, connections);
 
 	// UI state
-	let fromStation: number | null = $state(null);
-	let toStation: number | null = $state(null);
+	let fromStation: string | null = $state(null);
+	let toStation: string | null = $state(null);
 	let path: any[] = $state([]);
 	let showPathDetails = $state(false);
 	let totalDuration = $state(0);
@@ -47,7 +47,7 @@
 	}
 
 	// Handle station click from the graph
-	function handleStationClick(stationId: number) {
+	function handleStationClick(stationId: string) {
 		if (!fromStation) {
 			fromStation = stationId;
 		} else if (!toStation) {
@@ -66,7 +66,7 @@
 
 	// Get unique stations for dropdown
 	let uniqueStations = () => {
-		const stationMap = new Map<number, { id: number; name: string; codes: string[] }>();
+		const stationMap = new Map<string, { id: string; name: string; codes: string[] }>();
 		stationsWithLines.forEach((station) => {
 			if (!stationMap.has(station.id)) {
 				stationMap.set(station.id, {
@@ -76,7 +76,7 @@
 				});
 			}
 			const entry = stationMap.get(station.id)!;
-			station.stationLines.forEach((sl: StationLine) => {
+			station.stationLines.forEach((sl) => {
 				const code = sl.station_code;
 				if (code && !entry.codes.includes(code)) {
 					entry.codes.push(code);
