@@ -1,5 +1,6 @@
 export type LineColours = Record<number, { color: string; code: string }>;
 
+// Referenced from https://en.wikipedia.org/wiki/Module:Adjacent_stations/SMRT
 export const lineColours: LineColours = {
 	1: { color: '#d42e12', code: 'NS' },
 	2: { color: '#009645', code: 'EW' },

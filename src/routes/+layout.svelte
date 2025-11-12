@@ -2,10 +2,10 @@
 	import type { LayoutProps } from './$types';
 	import { page } from '$app/state';
 	import '../app.css';
-	import { Navbar, NavBrand, NavUl, NavLi, Button, DarkMode } from 'flowbite-svelte';
-	import { Sun, Moon } from '@lucide/svelte';
+	import { Navbar, NavBrand, NavUl, NavLi, Button, DarkMode, Alert } from 'flowbite-svelte';
+	import { Sun, Moon, AlertCircle } from '@lucide/svelte';
 
-	let { children }: LayoutProps = $props();
+	let { children, data }: LayoutProps = $props();
 
 	let activeUrl = $state(page.url.pathname);
 	let activeClass =
@@ -45,6 +45,33 @@
 		<NavLi href="/debug">Debug</NavLi>
 	</NavUl>
 </Navbar>
+
+{#if data.trainServiceAlerts && data.trainServiceAlerts.Status !== 1}
+	<div class="container mx-auto px-4 pt-4">
+		<Alert color="red" class="mb-4">
+			<AlertCircle slot="icon" class="h-5 w-5" />
+			<span class="font-medium">Train Service Alert!</span>
+
+			{#if data.trainServiceAlerts.AffectedSegments && data.trainServiceAlerts.AffectedSegments.length > 0}
+				<div class="mt-3">
+					<p class="font-semibold">Affected Segments:</p>
+					{#each data.trainServiceAlerts.AffectedSegments as segment}
+						<p class="mt-1 ml-4">• {segment}</p>
+					{/each}
+				</div>
+			{/if}
+
+			{#if data.trainServiceAlerts.Message && data.trainServiceAlerts.Message.length > 0}
+				<div class="mt-3">
+					<p class="font-semibold">Messages:</p>
+					{#each data.trainServiceAlerts.Message as message}
+						<p class="mt-1 ml-4">{message.Content}</p>
+					{/each}
+				</div>
+			{/if}
+		</Alert>
+	</div>
+{/if}
 
 <main class="py-4">
 	<div class="container mx-auto p-4">

@@ -8,8 +8,15 @@
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
 	},
+	"secrets_store_secrets": [
+		{
+			"binding": "lta-datamall-api",
+			"store_id": "9b1e210ca83048dbb0cba11e0f127e5b",
+			"secret_name": "lta-api"
+		}
+	],
 	"observability": {
 		"enabled": true
 	},
-	"compatibility_flags": [ "nodejs_compat" ]
+	"compatibility_flags": ["nodejs_compat"]
 }

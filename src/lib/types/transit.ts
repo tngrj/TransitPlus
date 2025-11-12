@@ -90,3 +90,13 @@ export interface FareWithBands {
 		fare: number;
 	}>;
 } 
+export interface TrainServiceAlertMessage {
+	Status: number;
+	Content: string;
+}
+
+export interface TrainServiceAlert {
+	Status: number;
+	AffectedSegments: string[];
+	Message: TrainServiceAlertMessage[];
+}
