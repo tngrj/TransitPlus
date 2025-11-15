@@ -3,8 +3,9 @@
 	import { Train } from '@lucide/svelte';
 	import MetroGraph from './metroGraph.svelte';
 	import { PathFinder } from './pathFinder';
-	import { getLineColour } from '$lib/utils/lineColours';
+	import { getLineColour, getApiLineCodeFromStationCode } from '$lib/utils/lineColours';
 	import type { StationWithLines, ConnectionWithDetails } from '$lib/types/transit';
+	import type { PcdRealTimeData } from '$lib/types/transit';
 
 	let {
 		stationsWithLines,
@@ -16,17 +17,19 @@
 	// UI state
 	let fromStation: string | null = $state(null);
 	let toStation: string | null = $state(null);
+
 	let path: any[] = $state([]);
 	let showPathDetails = $state(false);
 	let totalDuration = $state(0);
 	let totalDistance = $state(0);
 	let transfersCount = $state(0);
+	let departureCrowdLevel: string | null = $state(null);
 
 	// Reference to the graph component
 	let graphComponent: any;
 
 	// Calculate and display the path
-	function calculatePath() {
+	async function calculatePath() {
 		if (fromStation && toStation) {
 			const result = pathFinder.findShortestPath(fromStation, toStation);
 			path = result.path;
@@ -43,6 +46,41 @@
 				const stationIds = path.map((p) => p.station);
 				graphComponent.highlightPath(stationIds);
 			}
+
+			// Fetch PCD data for all stations in the path
+			await fetchCrowdDataForPath();
+		}
+	}
+
+	// Fetch crowd data for the departure station
+	async function fetchCrowdDataForPath() {
+		departureCrowdLevel = null;
+
+		const departureStation = stationsWithLines.find((s) => s.id === fromStation);
+		if (!departureStation || departureStation.stationLines.length === 0) return;
+
+		// Get the first station code and its line
+		const firstStationLine = departureStation.stationLines[0];
+		const stationCode = firstStationLine.station_code;
+		const lineCode = getApiLineCodeFromStationCode(stationCode);
+
+		if (!lineCode) return;
+
+		try {
+			const response = await fetch(`/api/pcd?trainLine=${lineCode}`);
+			if (response.ok) {
+				const result = await response.json();
+				if (result.data) {
+					const stationData = result.data.find(
+						(pcd: PcdRealTimeData) => pcd.Station === stationCode
+					);
+					if (stationData) {
+						departureCrowdLevel = stationData.CrowdLevel;
+					}
+				}
+			}
+		} catch (error) {
+			console.error('Error fetching departure crowd data:', error);
 		}
 	}
 
@@ -175,6 +213,25 @@
 				<div class="text-xl font-bold">{totalDistance.toFixed(1)} km</div>
 			</Card>
 		</div>
+
+		{#if departureCrowdLevel}
+			<Card class="mb-4">
+				<div class="flex items-center justify-between">
+					<div>
+						<div class="text-sm text-gray-400">Crowd Level</div>
+						<div class="mt-1 text-lg font-semibold">
+							{#if departureCrowdLevel === 'l'}
+								<span class="text-green-600">Low</span>
+							{:else if departureCrowdLevel === 'm'}
+								<span class="text-yellow-600">Moderate</span>
+							{:else if departureCrowdLevel === 'h'}
+								<span class="text-red-600">High</span>
+							{/if}
+						</div>
+					</div>
+				</div>
+			</Card>
+		{/if}
 
 		<div class="space-y-3 text-black dark:text-white">
 			{#each path as step, i}

@@ -25,3 +25,26 @@ export function getLineColour(lineId: number | null): string {
 export function getLineCodeFromId(lineId: number): string {
 	return lineColours[lineId]?.code || 'Unknown';
 }
+
+export function getApiLineCodeFromStationCode(stationCode: string): string | null {
+	// Extract the line prefix (letters only)
+	const linePrefix = stationCode.replace(/[0-9]/g, '');
+
+	const mapping: Record<string, string> = {
+		NS: 'NSL',
+		EW: 'EWL',
+		CC: 'CCL',
+		NE: 'NEL',
+		DT: 'DTL',
+		TE: 'TEL',
+		CG: 'CGL',
+		BP: 'BPL',
+		SE: 'SLRT',
+		SW: 'SLRT',
+		PE: 'PLRT',
+		PW: 'PLRT',
+		CE: 'CEL'
+	};
+
+	return mapping[linePrefix] || null;
+}

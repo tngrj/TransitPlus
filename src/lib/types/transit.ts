@@ -100,3 +100,14 @@ export interface TrainServiceAlert {
 	AffectedSegments: string[];
 	Message: TrainServiceAlertMessage[];
 }
+
+export interface PcdRealTimeData {
+	Station: string;
+	StartTime: string;
+	EndTime: string;
+	CrowdLevel: string;
+}
+
+export interface PcdRealTimeResponse {
+	value: PcdRealTimeData[];
+}

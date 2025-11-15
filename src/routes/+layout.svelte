@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 	import '../app.css';
 	import { Navbar, NavBrand, NavUl, NavLi, Button, DarkMode, Alert } from 'flowbite-svelte';
-	import { Sun, Moon, AlertCircle } from '@lucide/svelte';
+	import { Sun, Moon, AlertCircle, Menu } from '@lucide/svelte';
 
 	let { children, data }: LayoutProps = $props();
 
@@ -19,7 +19,7 @@
 
 <Navbar let:toggle>
 	<NavBrand href="/">
-		<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Transit+</span
+		<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white ml-3">Transit+</span
 		>
 	</NavBrand>
 	<div class="flex md:order-2">
@@ -27,15 +27,8 @@
 			<Sun class="h-4 w-4 dark:hidden" />
 			<Moon class="hidden h-4 w-4 dark:block" />
 		</DarkMode>
-		<Button color="none" class="ml-3 md:hidden" on:click={toggle}>
-			<svg stroke="currentColor" fill="none" viewBox="0 0 24 24" class="h-6 w-6">
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M4 6h16M4 12h16M4 18h16"
-				></path>
-			</svg>
+		<Button color="none" class="ml-3 md:hidden" onclick={toggle}>
+			<Menu />
 		</Button>
 	</div>
 	<NavUl {activeUrl} {activeClass} {nonActiveClass}>

@@ -1,43 +1,77 @@
-import type { TrainServiceAlert } from '$lib/types/transit';
+import type { TrainServiceAlert, PcdRealTimeData } from '$lib/types/transit';
 
 const LTA_BASE_URL = 'https://datamall2.mytransport.sg/ltaodataservice';
 
-const createHeaders = (apiKey: string) => {
-	const headers = new Headers();
-	headers.append('AccountKey', apiKey);
-	headers.append('accept', 'application/json');
-	return headers;
-};
+const VALID_LINES = [
+	'CCL',
+	'CEL',
+	'CGL',
+	'DTL',
+	'EWL',
+	'NEL',
+	'NSL',
+	'BPL',
+	'SLRT',
+	'PLRT',
+	'TEL'
+] as const;
 
-const createRequestOptions = (apiKey: string): RequestInit => ({
-	method: 'GET',
-	headers: createHeaders(apiKey),
-	redirect: 'follow'
-});
+type ValidLine = (typeof VALID_LINES)[number];
 
-export const getTrainServiceAlerts = async (
-	apiKey: string
-): Promise<TrainServiceAlert | null> => {
-	try {
-		if (!apiKey) {
-			console.error('LTA API key not provided');
-			return null;
-		}
+function makeHeaders(apiKey: string): Headers {
+	return new Headers({
+		AccountKey: apiKey,
+		accept: 'application/json'
+	});
+}
 
-		const response = await fetch(
-			`${LTA_BASE_URL}/TrainServiceAlerts`,
-			createRequestOptions(apiKey)
-		);
+function makeRequest(apiKey: string): RequestInit {
+	return {
+		method: 'GET',
+		headers: makeHeaders(apiKey),
+		redirect: 'follow'
+	};
+}
 
-		if (!response.ok) {
-			console.error('Failed to fetch train service alerts:', response.status);
-			return null;
-		}
+async function fetchJSON<T>(url: string, apiKey: string): Promise<T> {
+	const response = await fetch(url, makeRequest(apiKey));
 
-		const result = (await response.json()) as { value: TrainServiceAlert };
-		return result.value;
-	} catch (error) {
-		console.error('Error fetching train service alerts:', error);
-		return null;
+	if (!response.ok) {
+		throw new Error(`LTA API error: ${response.status} ${response.statusText}`);
 	}
-};
+
+	return response.json() as Promise<T>;
+}
+
+/** ---------------------------
+ * Train Service Alerts
+ * ---------------------------- */
+export async function getTrainServiceAlerts(apiKey: string): Promise<TrainServiceAlert> {
+	if (!apiKey) throw new Error('Missing LTA API key');
+
+	const url = `${LTA_BASE_URL}/TrainServiceAlerts`;
+	const result = await fetchJSON<{ value: TrainServiceAlert }>(url, apiKey);
+
+	return result.value;
+}
+
+/** ---------------------------
+ * PCD Real-time
+ * ---------------------------- */
+export async function getPcdRealTime(
+	apiKey: string,
+	trainLine: string
+): Promise<PcdRealTimeData[]> {
+	if (!apiKey) throw new Error('Missing LTA API key');
+
+	const line = trainLine.toUpperCase() as ValidLine;
+
+	if (!VALID_LINES.includes(line)) {
+		throw new Error(`Invalid train line code: ${trainLine}`);
+	}
+
+	const url = `${LTA_BASE_URL}/PCDRealTime?TrainLine=${line}`;
+	const result = await fetchJSON<{ value: PcdRealTimeData[] }>(url, apiKey);
+
+	return result.value;
+}
