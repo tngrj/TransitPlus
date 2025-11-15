@@ -458,7 +458,7 @@
 		},
 		{
 			"from": "DT11",
-			"to": "DT2",
+			"to": "DT12",
 			"line": "DT",
 			"duration_seconds": 180,
 			"distance_km": 1.4,

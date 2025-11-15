@@ -1,32 +1,35 @@
 <script lang="ts">
-	import { Button, Select, Modal, Card } from 'flowbite-svelte';
-	import { Route, Train } from '@lucide/svelte';
+	import { Select, Modal, Card } from 'flowbite-svelte';
+	import { Train } from '@lucide/svelte';
 	import MetroGraph from './metroGraph.svelte';
 	import { PathFinder } from './pathFinder';
-	import { getLineColour } from '$lib/utils/lineColours';
-	import type { Station, Connection, StationLine } from '$lib/utils/transitTyping';
+	import { getLineColour, getApiLineCodeFromStationCode } from '$lib/utils/lineColours';
+	import type { StationWithLines, ConnectionWithDetails } from '$lib/types/transit';
+	import type { PcdRealTimeData } from '$lib/types/transit';
 
 	let {
 		stationsWithLines,
 		connections
-	}: { stationsWithLines: Station[]; connections: Connection[] } = $props();
+	}: { stationsWithLines: StationWithLines[]; connections: ConnectionWithDetails[] } = $props();
 
 	const pathFinder = new PathFinder(stationsWithLines, connections);
 
 	// UI state
-	let fromStation: number | null = $state(null);
-	let toStation: number | null = $state(null);
+	let fromStation: string | null = $state(null);
+	let toStation: string | null = $state(null);
+
 	let path: any[] = $state([]);
 	let showPathDetails = $state(false);
 	let totalDuration = $state(0);
 	let totalDistance = $state(0);
 	let transfersCount = $state(0);
+	let departureCrowdLevel: string | null = $state(null);
 
 	// Reference to the graph component
 	let graphComponent: any;
 
 	// Calculate and display the path
-	function calculatePath() {
+	async function calculatePath() {
 		if (fromStation && toStation) {
 			const result = pathFinder.findShortestPath(fromStation, toStation);
 			path = result.path;
@@ -43,11 +46,46 @@
 				const stationIds = path.map((p) => p.station);
 				graphComponent.highlightPath(stationIds);
 			}
+
+			// Fetch PCD data for all stations in the path
+			await fetchCrowdDataForPath();
+		}
+	}
+
+	// Fetch crowd data for the departure station
+	async function fetchCrowdDataForPath() {
+		departureCrowdLevel = null;
+
+		const departureStation = stationsWithLines.find((s) => s.id === fromStation);
+		if (!departureStation || departureStation.stationLines.length === 0) return;
+
+		// Get the first station code and its line
+		const firstStationLine = departureStation.stationLines[0];
+		const stationCode = firstStationLine.station_code;
+		const lineCode = getApiLineCodeFromStationCode(stationCode);
+
+		if (!lineCode) return;
+
+		try {
+			const response = await fetch(`/api/pcd?trainLine=${lineCode}`);
+			if (response.ok) {
+				const result = await response.json();
+				if (result.data) {
+					const stationData = result.data.find(
+						(pcd: PcdRealTimeData) => pcd.Station === stationCode
+					);
+					if (stationData) {
+						departureCrowdLevel = stationData.CrowdLevel;
+					}
+				}
+			}
+		} catch (error) {
+			console.error('Error fetching departure crowd data:', error);
 		}
 	}
 
 	// Handle station click from the graph
-	function handleStationClick(stationId: number) {
+	function handleStationClick(stationId: string) {
 		if (!fromStation) {
 			fromStation = stationId;
 		} else if (!toStation) {
@@ -66,7 +104,7 @@
 
 	// Get unique stations for dropdown
 	let uniqueStations = () => {
-		const stationMap = new Map<number, { id: number; name: string; codes: string[] }>();
+		const stationMap = new Map<string, { id: string; name: string; codes: string[] }>();
 		stationsWithLines.forEach((station) => {
 			if (!stationMap.has(station.id)) {
 				stationMap.set(station.id, {
@@ -76,7 +114,7 @@
 				});
 			}
 			const entry = stationMap.get(station.id)!;
-			station.stationLines.forEach((sl: StationLine) => {
+			station.stationLines.forEach((sl) => {
 				const code = sl.station_code;
 				if (code && !entry.codes.includes(code)) {
 					entry.codes.push(code);
@@ -102,9 +140,8 @@
 </script>
 
 <div class="container mx-auto p-4">
-	>
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-4">
-		<div class="md:col-span-3">
+		<div class="hidden md:col-span-3 md:block">
 			<MetroGraph
 				bind:this={graphComponent}
 				{stationsWithLines}
@@ -114,7 +151,7 @@
 		</div>
 
 		<Card>
-			<div class="mb-4">
+			<div class="mb-4 space-y-4">
 				<Select
 					bind:value={fromStation}
 					on:change={() => {
@@ -128,9 +165,7 @@
 						</option>
 					{/each}
 				</Select>
-			</div>
 
-			<div class="mb-4">
 				<Select
 					bind:value={toStation}
 					on:change={() => {
@@ -145,45 +180,58 @@
 					{/each}
 				</Select>
 			</div>
-
-			<Button color="primary" class="mb-4 w-full" on:click={calculatePath}>
-				<Route class="mr-2" size={16} />
-				Find Route
-			</Button>
 		</Card>
 	</div>
 </div>
 
-<Modal bind:open={showPathDetails} title="Route Details">
+<Modal bind:open={showPathDetails}>
+	<div slot="header" class="flex items-center gap-2 text-black dark:text-white">
+		<Train class="mr-2" size={24} />
+		<h2 class="text-xl font-semibold">
+			{path[0]?.stationName} to {path[path.length - 1]?.stationName}
+		</h2>
+	</div>
 	<div class="p-4">
-		<div class="mb-4 flex items-center text-black dark:text-white">
-			<Train class="mr-2" size={24} />
-			<h2 class="text-xl font-semibold">
-				{path[0]?.stationName} to {path[path.length - 1]?.stationName}
-			</h2>
-		</div>
-
-		<div class="mb-4 grid grid-cols-4 gap-4">
-			<div class="rounded-lg bg-gray-100 p-3 text-center">
-				<div class="text-sm text-gray-600">Duration</div>
+		<div class="mb-4 grid grid-cols-2 gap-4 md:grid-cols-4">
+			<Card class="text-center">
+				<div class="text-sm text-gray-400">Duration</div>
 				<div class="text-xl font-bold">{Math.floor(totalDuration / 60)} min</div>
-			</div>
+			</Card>
 
-			<div class="rounded-lg bg-gray-100 p-3 text-center">
-				<div class="text-sm text-gray-600">Transfers</div>
+			<Card class="text-center">
+				<div class="text-sm text-gray-400">Transfers</div>
 				<div class="text-xl font-bold">{transfersCount}</div>
-			</div>
+			</Card>
 
-			<div class="rounded-lg bg-gray-100 p-3 text-center">
-				<div class="text-sm text-gray-600">Stations</div>
+			<Card class="text-center">
+				<div class="text-sm text-gray-400">Stations</div>
 				<div class="text-xl font-bold">{path.length - 1}</div>
-			</div>
+			</Card>
 
-			<div class="rounded-lg bg-gray-100 p-3 text-center">
-				<div class="text-sm text-gray-600">Distance</div>
+			<Card class="text-center">
+				<div class="text-sm text-gray-400">Distance</div>
 				<div class="text-xl font-bold">{totalDistance.toFixed(1)} km</div>
-			</div>
+			</Card>
 		</div>
+
+		{#if departureCrowdLevel}
+			<Card class="mb-4">
+				<div class="flex items-center justify-between">
+					<div>
+						<div class="text-sm text-gray-400">Crowd Level</div>
+						<div class="mt-1 text-lg font-semibold">
+							{#if departureCrowdLevel === 'l'}
+								<span class="text-green-600">Low</span>
+							{:else if departureCrowdLevel === 'm'}
+								<span class="text-yellow-600">Moderate</span>
+							{:else if departureCrowdLevel === 'h'}
+								<span class="text-red-600">High</span>
+							{/if}
+						</div>
+					</div>
+				</div>
+			</Card>
+		{/if}
 
 		<div class="space-y-3 text-black dark:text-white">
 			{#each path as step, i}
